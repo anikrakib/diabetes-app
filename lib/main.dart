@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/services/providers/dark_theme_provider.dart';
+import 'package:flutter_diabetes_app/services/providers/get_started_provider.dart';
 import 'package:flutter_diabetes_app/services/routing/app_pages.dart';
-import 'package:flutter_diabetes_app/utills/theme.dart';
+import 'package:flutter_diabetes_app/utils/theme.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
@@ -27,17 +28,22 @@ class _DiabetesAppState extends State<DiabetesApp> {
 
   void getCurrentAppTheme() async {
     themeChangeProvider.darkTheme =
-    await themeChangeProvider.darkThemePreference.getTheme();
+        await themeChangeProvider.darkThemePreference.getTheme();
   }
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) {
-        return themeChangeProvider;
-      },
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<DarkThemeProvider>(
+          create: (_) => themeChangeProvider,
+        ),
+        ChangeNotifierProvider<GetStartedProvider>(
+          create: (_) => GetStartedProvider(),
+        ),
+      ],
       child: Consumer<DarkThemeProvider>(
-        builder: (context, value, child){
+        builder: (context, value, child) {
           return GetMaterialApp(
             title: 'Diabetes App',
             theme: AppTheme.themeData(themeChangeProvider.darkTheme, context),
@@ -47,7 +53,6 @@ class _DiabetesAppState extends State<DiabetesApp> {
             //themeMode: ThemeMode.light,
           );
         },
-
       ),
     );
   }

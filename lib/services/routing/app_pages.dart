@@ -1,5 +1,6 @@
 import 'package:flutter_diabetes_app/screens/home_screen/home_screen.dart';
 import 'package:get/get.dart';
+import '../../screens/get_start_screen/get_start_screen.dart';
 import '../../screens/splash_screen/splash_screen.dart';
 import 'app_routes.dart';
 
@@ -16,6 +17,10 @@ class AppPages {
     GetPage(
       name: Paths.home,
       page: () => const HomePage(),
+    ),
+    GetPage(
+      name: Paths.getStarted,
+      page: () => const GetStartedScreen(),
     ),
   ];
 }

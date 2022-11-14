@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
           onTap: (){
             darkThemeProvider.darkTheme = !(darkThemeProvider.darkTheme);
           },
-          child: Center(child: Text('Home Screen')),
+          child: const Center(child: Text('Home Screen')),
         ),
       ),
     );

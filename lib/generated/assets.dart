@@ -17,7 +17,7 @@ class Assets {
   static const String imagesAppLogo = 'assets/images/app_logo.png';
   static const String imagesMeasureWaistImage = 'assets/images/measure_waist_image.svg';
   static const String imagesMeterImage = 'assets/images/meter_image.svg';
-  static const String imagesOnBoardImage = 'assets/images/on_board_image.svg';
+  static const String imagesOnBoardImage = 'assets/images/on_board_image.png';
   static const String imagesWorldMap = 'assets/images/world_map.svg';
 
 }
