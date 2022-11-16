@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/services/providers/dark_theme_provider.dart';
 import 'package:flutter_diabetes_app/services/providers/get_started_provider.dart';
+import 'package:flutter_diabetes_app/services/providers/home_screen_provider.dart';
 import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
 import 'package:flutter_diabetes_app/services/routing/app_pages.dart';
 import 'package:flutter_diabetes_app/utils/theme.dart';
@@ -44,6 +45,9 @@ class _DiabetesAppState extends State<DiabetesApp> {
         ),
         ChangeNotifierProvider<UserDataProvider>(
           create: (_) => UserDataProvider(),
+        ),
+        ChangeNotifierProvider<HomeScreenProvider>(
+          create: (_) => HomeScreenProvider(),
         ),
       ],
       child: Consumer<DarkThemeProvider>(

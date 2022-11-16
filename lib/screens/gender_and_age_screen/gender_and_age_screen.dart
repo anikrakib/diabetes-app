@@ -27,7 +27,7 @@ class _GenderAndAgeScreenState extends State<GenderAndAgeScreen> {
       builder: (context, constraints) {
         var height = constraints.maxHeight;
         return Padding(
-          padding: const EdgeInsets.only(top: 10, bottom: 10),
+          padding: const EdgeInsets.only(top: 15, bottom: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

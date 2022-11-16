@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_diabetes_app/services/providers/home_screen_provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../generated/assets.dart';
 import '../utils/app_text_style.dart';
 import '../utils/colors.dart';
+import '../utils/constant.dart';
 
 class APPButton extends StatelessWidget {
   const APPButton({
     Key? key,
     this.onPressed,
     this.text = 'Next',
+    this.homeScreenProvider,
   }) : super(key: key);
   final String text;
   final VoidCallback? onPressed;
+  final HomeScreenProvider? homeScreenProvider;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +39,7 @@ class APPButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          text,
+          (homeScreenProvider?.currentPage != 4) ? text : calculate,
           style: AppTextStyle.buttonTextStyle,
         ),
       ),
