@@ -3,6 +3,7 @@ class Assets {
   Assets._();
 
   static const String assetsAppLogo = 'assets/app_logo.svg';
+  static const String fontsInterBold = 'assets/fonts/Inter_bold.ttf';
   static const String fontsInterMedium = 'assets/fonts/inter_medium.ttf';
   static const String fontsInterRegular = 'assets/fonts/inter_regular.ttf';
   static const String iconsIconBack = 'assets/icons/icon_back.svg';

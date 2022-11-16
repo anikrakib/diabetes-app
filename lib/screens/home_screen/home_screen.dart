@@ -1,20 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../../services/providers/dark_theme_provider.dart';
+import '../../widgets/app_button.dart';
+import '../gender_and_age_screen/gender_and_age_screen.dart';
+import 'component/custom_switch.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
-    var darkThemeProvider = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
       body: SafeArea(
-        child: GestureDetector(
-          onTap: (){
-            darkThemeProvider.darkTheme = !(darkThemeProvider.darkTheme);
-          },
-          child: const Center(child: Text('Home Screen')),
+        child: Padding(
+          padding:
+              const EdgeInsets.only(left: 30, right: 30, top: 20, bottom: 40),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppBackButton(
+                    onPressed: () {},
+                  ),
+                  const CustomSwitch(),
+                ],
+              ),
+              Expanded(
+                child: PageView.builder(
+                  itemCount: 5,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) => const GenderAndAgeScreen(),
+                ),
+              ),
+              APPButton(
+                onPressed: () {},
+              )
+            ],
+          ),
         ),
       ),
     );
