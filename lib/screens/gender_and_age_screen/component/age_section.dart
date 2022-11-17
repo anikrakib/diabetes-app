@@ -21,11 +21,9 @@ class AgeSection extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text(
+          Text(
             ageSectionText,
-            style: TextStyle(
-              fontSize: 19,
-            ),
+            style: AppTextStyle.textStyleMedium(19),
           ),
           Expanded(
             child: Center(
@@ -33,11 +31,11 @@ class AgeSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.zero,
                     child: Text(
                       age,
-                      style: AppTextStyle.ageTextStyle,
+                      style: AppTextStyle.textStyleMedium(17),
                     ),
                   ),
                   RotatedBox(

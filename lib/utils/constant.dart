@@ -23,6 +23,16 @@ const REGIONS = [
   'Other',
 ];
 
+enum WeightType {
+  KG,
+  LBS,
+}
+
+enum HeightType {
+  INCH,
+  CM,
+}
+
 const getStartedText = 'Get Started';
 const selectGenderText = 'Select gender :';
 const ageSectionText = 'How old are you ?';
@@ -30,6 +40,10 @@ const regionSectionText = 'Where are you born ?';
 const genderMaleText = 'Male';
 const genderFeMaleText = 'Female';
 const age = 'Age';
+const kg = 'kg';
+const lbs = 'lbs';
+const inch = 'inch';
+const cm = 'cm';
 const next = 'Next';
 const calculate = 'Calculate';
 const initialRegion = 'Asia';
@@ -43,7 +57,12 @@ const REGION_LIST_TILE_HIGHT = 50.00;
 const LIST_WHEEL_ITEM_EXTENT = 46.00;
 const AGE_RANGE = 100;
 const INITIAL_AGE = 40;
+const INITIAL_WEIGHT = 50;
 const BORDER_RADIUS = 10.00;
+const INITIAL_HEIGHT_IN_INCH = 60.0;
+const INITIAL_HEIGHT_IN_CM = 152.4;
+const HEIGHT_LIMIT_IN_INCH = 96.0;
+const HEIGHT_LIMIT_IN_CM = 243.84;
 
 const pagePadding = 15.00;
 

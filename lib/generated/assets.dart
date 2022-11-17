@@ -14,7 +14,10 @@ class Assets {
   static const String iconsIconMale = 'assets/icons/icon_male.svg';
   static const String iconsIconProgressBarIndicator = 'assets/icons/icon_progress_bar_indicator.svg';
   static const String iconsIconRadioSelector = 'assets/icons/icon_radio_selector.svg';
-  static const String iconsIconRulerIndicator = 'assets/icons/icon_ruler_indicator.svg';
+  static const String iconsIconRulerIndicatorLarge = 'assets/icons/icon_ruler_indicator_large.svg';
+  static const String iconsIconRulerIndicatorSmall = 'assets/icons/icon_ruler_indicator_small.svg';
+  static const String iconsIconRulerMarkerDark = 'assets/icons/icon_ruler_marker_dark.svg';
+  static const String iconsIconRulerMarkerLight = 'assets/icons/icon_ruler_marker_light.svg';
   static const String imagesAppLogo = 'assets/images/app_logo.png';
   static const String imagesMeasureWaistImage = 'assets/images/measure_waist_image.svg';
   static const String imagesMeterImage = 'assets/images/meter_image.svg';

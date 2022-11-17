@@ -20,7 +20,7 @@ class RegionScreen extends StatelessWidget {
             children: [
               Text(
                 regionSectionText,
-                style: AppTextStyle.onlyFontSizeTextStyle(19),
+                style: AppTextStyle.textStyleMedium(19),
               ),
               Expanded(
                 child: Padding(

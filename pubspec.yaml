@@ -45,6 +45,8 @@ dependencies:
   flutter_svg: ^1.1.5
   # Wraps platform-specific persistent storage for simple data (NSUserDefaults on iOS and macOS, SharedPreferences on Android, etc.).
   shared_preferences: ^2.0.15
+  #Custom Slider package lets you add a beautiful slider Track gradient and Image on SliderThumb to your Flutter app.
+  custom_slider: ^0.0.3
 
 dev_dependencies:
   flutter_test:

@@ -13,7 +13,12 @@ SvgPicture svgImage(String path) => SvgPicture.asset(
   path,
 );
 
-SvgPicture svgImageWithColor(
+SvgPicture svgImageWithColor(String path,Color color) => SvgPicture.asset(
+  path,
+  color: color,
+);
+
+SvgPicture svgImageWithHeightWightColor(
     double height, double width, String path, Color color) =>
     SvgPicture.asset(
       path,

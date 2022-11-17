@@ -24,14 +24,16 @@ abstract class AppTextStyle {
     fontSize: 11,
     fontWeight: FontWeight.w400,
   );
-  static const ageTextStyle = TextStyle(
-    fontSize: 17,
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle onlyFontSizeTextStyle(double size) {
+  static TextStyle textStyleMedium(double size) {
     return TextStyle(
       fontSize: size,
+      fontWeight: FontWeight.w600,
+    );
+  }
+  static TextStyle textStyleRegular(double size) {
+    return TextStyle(
+      fontSize: size,
+      fontWeight: FontWeight.w500,
     );
   }
 }

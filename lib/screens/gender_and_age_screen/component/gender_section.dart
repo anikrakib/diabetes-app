@@ -26,7 +26,7 @@ class GenderSection extends StatelessWidget {
             children: [
               Text(
                 selectGenderText,
-                style: AppTextStyle.onlyFontSizeTextStyle(19),
+                style: AppTextStyle.textStyleMedium(19),
               ),
               Expanded(child: Container()),
               Row(
@@ -90,7 +90,7 @@ class GenderWidget extends StatelessWidget {
                     ),
                     Text(
                       genderType,
-                      style: AppTextStyle.onlyFontSizeTextStyle(19),
+                      style: AppTextStyle.textStyleRegular(19),
                     ),
                   ],
                 ),
