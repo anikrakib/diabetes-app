@@ -42,13 +42,22 @@ const genderFeMaleText = 'Female';
 const age = 'Age';
 const kg = 'kg';
 const lbs = 'lbs';
+const waistText = 'Waist :';
+const weightText = 'Weight :';
+const heightText = 'Height :';
+const bmiText = 'Your BMI is :';
+const bmiPointText = 'BMI point...';
 const inch = 'inch';
 const cm = 'cm';
 const next = 'Next';
 const calculate = 'Calculate';
 const initialRegion = 'Asia';
+const waistSuggestion = 'Stand up and measure your waist length'
+    'from belly button in relaxed mood';
 const getStartedBodyText =
-    'Predicts risk undiagnosed diabetes mellitus with American Diabetes Association (ADA) Risk Calculator. Early detection of undiagnosed diabetes mellitus will lead to prompt treatment and better outcomes.';
+    'Predicts risk undiagnosed diabetes mellitus with American Diabetes'
+    'Association (ADA) Risk Calculator. Early detection of undiagnosed diabetes'
+    'mellitus will lead to prompt treatment and better outcomes.';
 
 const LIST_WHEEL_WIDTH = 285.00;
 const LIST_WHEEL_HIGHT = 60.00;
@@ -65,5 +74,3 @@ const HEIGHT_LIMIT_IN_INCH = 96.0;
 const HEIGHT_LIMIT_IN_CM = 243.84;
 
 const pagePadding = 15.00;
-
-

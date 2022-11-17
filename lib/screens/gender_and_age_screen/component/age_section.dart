@@ -23,7 +23,7 @@ class AgeSection extends StatelessWidget {
           ),
           Text(
             ageSectionText,
-            style: AppTextStyle.textStyleMedium(19),
+            style: AppTextStyle.textStyleMedium(17),
           ),
           Expanded(
             child: Center(

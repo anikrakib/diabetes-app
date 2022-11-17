@@ -4,6 +4,7 @@ import '../../utils/constant.dart';
 class UserDataProvider extends ChangeNotifier {
   int _currentAge = INITIAL_AGE;
   int _currentWeight = INITIAL_WEIGHT;
+  int _currentWaist = 60;
   double _currentHeightInINCH = INITIAL_HEIGHT_IN_INCH;
   double _currentHeightInCM = INITIAL_HEIGHT_IN_CM;
   bool _firstTimeInAgePage = false;
@@ -15,6 +16,7 @@ class UserDataProvider extends ChangeNotifier {
 
   int get currentAge => _currentAge;
   int get currentWeight => _currentWeight;
+  int get currentWaist => _currentWaist;
   double get currentHeightInINCH => _currentHeightInINCH;
   double get currentHeightInCM => _currentHeightInCM;
   bool get firstTimeInAgePage => _firstTimeInAgePage;
@@ -30,6 +32,11 @@ class UserDataProvider extends ChangeNotifier {
 
   set changeCurrentWeight(int weight) {
     _currentWeight = weight;
+    notifyListeners();
+  }
+
+  set changeCurrentWaist(int waistValue) {
+    _currentWaist = waistValue;
     notifyListeners();
   }
 

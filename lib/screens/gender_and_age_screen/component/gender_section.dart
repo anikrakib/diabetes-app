@@ -26,7 +26,7 @@ class GenderSection extends StatelessWidget {
             children: [
               Text(
                 selectGenderText,
-                style: AppTextStyle.textStyleMedium(19),
+                style: AppTextStyle.textStyleMedium(17),
               ),
               Expanded(child: Container()),
               Row(

@@ -27,13 +27,13 @@ abstract class AppTextStyle {
   static TextStyle textStyleMedium(double size) {
     return TextStyle(
       fontSize: size,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
     );
   }
   static TextStyle textStyleRegular(double size) {
     return TextStyle(
       fontSize: size,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
     );
   }
 }

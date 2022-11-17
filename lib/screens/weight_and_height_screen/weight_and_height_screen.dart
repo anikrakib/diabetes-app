@@ -4,9 +4,9 @@ import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart'
 import 'package:flutter_diabetes_app/utils/app_text_style.dart';
 import 'package:flutter_diabetes_app/utils/colors.dart';
 import 'package:flutter_diabetes_app/utils/constant.dart';
+import 'package:flutter_diabetes_app/widgets/custom_ruler.dart';
 import 'package:provider/provider.dart';
 import 'component/type_widget.dart';
-import 'component/weight_ruler.dart';
 
 class WeightAndHeightScreen extends StatelessWidget {
   const WeightAndHeightScreen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class WeightAndHeightScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Weight:', style: AppTextStyle.textStyleMedium(19)),
+                  Text(weightText, style: AppTextStyle.textStyleMedium(17)),
                   Row(
                     children: [
                       TypeWidget(
@@ -43,13 +43,11 @@ class WeightAndHeightScreen extends StatelessWidget {
               const SizedBox(
                 height: pagePadding * 2,
               ),
-              WeightRuler(
-                userDataProvider: userDataProvider,
-              ),
+              const CustomRuler(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Height:', style: AppTextStyle.textStyleMedium(19)),
+                  Text(heightText, style: AppTextStyle.textStyleMedium(17)),
                   Row(
                     children: [
                       TypeWidget(
@@ -78,7 +76,7 @@ class WeightAndHeightScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Your BMI is :', style: AppTextStyle.textStyleMedium(19)),
+                    Text(bmiText, style: AppTextStyle.textStyleMedium(17)),
                     const SizedBox(
                       height: pagePadding*2,
                     ),
@@ -93,9 +91,9 @@ class WeightAndHeightScreen extends StatelessWidget {
                         ),
                         child: const Center(
                           child:  Text(
-                            'BMI point...',
+                            bmiPointText,
                             style: TextStyle(
-                              fontSize: 13,
+                              fontSize: 12,
                               color: AppColors.black,
                             ),
                           ),

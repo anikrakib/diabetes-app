@@ -20,6 +20,8 @@ class Assets {
   static const String iconsIconRulerMarkerLight = 'assets/icons/icon_ruler_marker_light.svg';
   static const String imagesAppLogo = 'assets/images/app_logo.png';
   static const String imagesMeasureWaistImage = 'assets/images/measure_waist_image.svg';
+  static const String imagesMeasureWaistImageDark = 'assets/images/measure_waist_image_dark.webp';
+  static const String imagesMeasureWaistImageLight = 'assets/images/measure_waist_image_light.webp';
   static const String imagesMeterImage = 'assets/images/meter_image.svg';
   static const String imagesOnBoardImage = 'assets/images/on_board_image.png';
   static const String imagesWorldMap = 'assets/images/world_map.svg';

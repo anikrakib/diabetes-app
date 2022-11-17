@@ -12,7 +12,7 @@ class RegionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: pagePadding),
+      padding: const EdgeInsets.only(top: pagePadding, bottom: pagePadding),
       child: Consumer<UserDataProvider>(
         builder: (_, userDataProvider, child) {
           return Column(
@@ -20,7 +20,7 @@ class RegionScreen extends StatelessWidget {
             children: [
               Text(
                 regionSectionText,
-                style: AppTextStyle.textStyleMedium(19),
+                style: AppTextStyle.textStyleMedium(17),
               ),
               Expanded(
                 child: Padding(
