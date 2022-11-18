@@ -34,19 +34,21 @@ class GenderSection extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Visibility(
-                    visible: dataProvider.gender == genderMaleText ||
-                        dataProvider.gender.isEmpty,
+                    visible: dataProvider.gender == GenderType.MALE ||
+                        dataProvider.gender == GenderType.NOTHING,
                     child: const GenderWidget(
                       genderTypeImage: Assets.iconsIconMale,
-                      genderType: genderMaleText,
+                      genderType: GenderType.MALE,
+                      genderText: genderMaleText,
                     ),
                   ),
                   Visibility(
-                    visible: dataProvider.gender == genderFeMaleText ||
-                        dataProvider.gender.isEmpty,
+                    visible: dataProvider.gender == GenderType.FEMALE ||
+                        dataProvider.gender == GenderType.NOTHING,
                     child: const GenderWidget(
                       genderTypeImage: Assets.iconsIconFemale,
-                      genderType: genderFeMaleText,
+                      genderType: GenderType.FEMALE,
+                      genderText: genderFeMaleText,
                     ),
                   ),
                 ],
@@ -65,9 +67,11 @@ class GenderWidget extends StatelessWidget {
     Key? key,
     required this.genderTypeImage,
     required this.genderType,
+    required this.genderText,
   }) : super(key: key);
   final String genderTypeImage;
-  final String genderType;
+  final GenderType genderType;
+  final String genderText;
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +93,7 @@ class GenderWidget extends StatelessWidget {
                       height: 30,
                     ),
                     Text(
-                      genderType,
+                      genderText,
                       style: AppTextStyle.textStyleRegular(19),
                     ),
                   ],
@@ -104,7 +108,7 @@ class GenderWidget extends StatelessWidget {
                     onTap: () {},
                     child: iconButtonWidget(
                       function: () {
-                        value.changeGender = '';
+                        value.changeGender = GenderType.NOTHING;
                       },
                       iconPath: Assets.iconsIconGenderSelect,
                     ),

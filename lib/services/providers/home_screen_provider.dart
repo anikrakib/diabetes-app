@@ -6,7 +6,7 @@ class HomeScreenProvider with ChangeNotifier{
   int get currentPage => _currentPage;
 
   set setPage(int newPage ){
-    if(newPage<=4 && newPage >= 0){
+    if(newPage<=5 && newPage >= 0){
       _currentPage = newPage;
       notifyListeners();
     }

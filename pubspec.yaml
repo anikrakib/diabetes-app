@@ -45,9 +45,7 @@ dependencies:
   flutter_svg: ^1.1.5
   # Wraps platform-specific persistent storage for simple data (NSUserDefaults on iOS and macOS, SharedPreferences on Android, etc.).
   shared_preferences: ^2.0.15
-  # The Flutter Gauges library includes the data visualization widgets Linear Gauge and Radial Gauge (a.k.a. circular gauge) to create modern,
-  # interactive, animated gauges.
-  syncfusion_flutter_gauges: ^20.3.57
+
 
 
 dev_dependencies:

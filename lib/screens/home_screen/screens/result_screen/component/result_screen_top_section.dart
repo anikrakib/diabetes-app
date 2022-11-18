@@ -11,9 +11,11 @@ class ResultScreenTopSection extends StatelessWidget {
     Key? key,
     required this.resultScreenData,
     required this.tabController,
+    required this.riskPoint,
   }) : super(key: key);
   final ResultScreenProvider resultScreenData;
   final TabController tabController;
+  final int riskPoint;
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +34,15 @@ class ResultScreenTopSection extends StatelessWidget {
             width: 320,
             child: Stack(
               alignment: Alignment.center,
-              children: const [
+              children:  [
                 CircularArc(
-                  riskPoint: 50,
+                  riskPoint: riskPoint,
                 ),
-                Positioned(
+                const Positioned(
                   top: 55,
                   child: Meter(),
                 ),
-                Text(
+                const Text(
                   'High',
                   style: TextStyle(
                     fontSize: 17,

@@ -8,7 +8,7 @@ class UserDataProvider extends ChangeNotifier {
   double _currentHeightInINCH = INITIAL_HEIGHT_IN_INCH;
   double _currentHeightInCM = INITIAL_HEIGHT_IN_CM;
   bool _firstTimeInAgePage = false;
-  String _gender = '';
+  GenderType _gender = GenderType.NOTHING;
   String _region = initialRegion;
   WeightType _weightType = WeightType.KG;
   HeightType _heightType = HeightType.INCH;
@@ -16,19 +16,30 @@ class UserDataProvider extends ChangeNotifier {
   YESOrNO _bloodPressure = YESOrNO.YES;
   YESOrNO _smokeCigarettes = YESOrNO.YES;
 
-
   int get currentAge => _currentAge;
+
   int get currentWeight => _currentWeight;
+
   int get currentWaist => _currentWaist;
+
   double get currentHeightInINCH => _currentHeightInINCH;
+
   double get currentHeightInCM => _currentHeightInCM;
+
   bool get firstTimeInAgePage => _firstTimeInAgePage;
-  String get gender => _gender;
+
+  GenderType get gender => _gender;
+
   String get region => _region;
+
   WeightType get weightType => _weightType;
+
   HeightType get heightType => _heightType;
+
   YESOrNO get diabetesPatientInFamily => _diabetesPatientInFamily;
+
   YESOrNO get bloodPressure => _bloodPressure;
+
   YESOrNO get smokeCigarettes => _smokeCigarettes;
 
   set changeCurrentAge(int age) {
@@ -37,7 +48,11 @@ class UserDataProvider extends ChangeNotifier {
   }
 
   set changeCurrentWeight(int weight) {
-    _currentWeight = weight;
+    if (_weightType == WeightType.KG) {
+      _currentWeight = weight;
+    } else {
+      _currentWeight = weight * 0.453592.round();
+    }
     notifyListeners();
   }
 
@@ -63,7 +78,7 @@ class UserDataProvider extends ChangeNotifier {
     }
   }
 
-  set changeGender(String selectGender) {
+  set changeGender(GenderType selectGender) {
     _gender = selectGender;
     notifyListeners();
   }
@@ -98,10 +113,10 @@ class UserDataProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  double incToCm(){
-    if(_heightType == HeightType.INCH){
+  double incToCm() {
+    if (_heightType == HeightType.INCH) {
       return currentHeightInINCH;
-    }else{
+    } else {
       return currentHeightInCM;
     }
   }

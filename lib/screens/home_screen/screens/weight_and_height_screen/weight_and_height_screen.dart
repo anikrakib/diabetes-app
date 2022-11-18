@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/weight_and_height_screen/component/height_slider.dart';
+import 'package:flutter_diabetes_app/services/providers/bmi_calculation.dart';
 import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
 import 'package:flutter_diabetes_app/utils/app_text_style.dart';
 import 'package:flutter_diabetes_app/utils/colors.dart';
@@ -17,6 +18,17 @@ class WeightAndHeightScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: pagePadding, bottom: pagePadding),
       child: Consumer<UserDataProvider>(
         builder: (_, userDataProvider, child) {
+          RiskPointCalculation riskPointCalculation = RiskPointCalculation(
+            gender: userDataProvider.gender,
+            age: userDataProvider.currentAge,
+            diabetesPatientInFamily: userDataProvider.diabetesPatientInFamily,
+            bloodPressure: userDataProvider.bloodPressure,
+            smokeCigarette: userDataProvider.smokeCigarettes,
+            waist: userDataProvider.currentWaist,
+            heightType: userDataProvider.heightType,
+            height: userDataProvider.incToCm(),
+            weight: userDataProvider.currentWeight,
+          );
           return Column(
             children: [
               Row(
@@ -78,7 +90,7 @@ class WeightAndHeightScreen extends StatelessWidget {
                   children: [
                     Text(bmiText, style: AppTextStyle.textStyleMedium(17)),
                     const SizedBox(
-                      height: pagePadding*2,
+                      height: pagePadding * 2,
                     ),
                     Align(
                       alignment: Alignment.center,
@@ -89,10 +101,10 @@ class WeightAndHeightScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: AppColors.backButtonColor,
                         ),
-                        child: const Center(
-                          child:  Text(
-                            bmiPointText,
-                            style: TextStyle(
+                        child: Center(
+                          child: Text(
+                            '$bmiPointText ${riskPointCalculation.bmiCalculation().toStringAsFixed(2)}',
+                            style: const TextStyle(
                               fontSize: 12,
                               color: AppColors.black,
                             ),

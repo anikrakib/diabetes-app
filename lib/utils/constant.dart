@@ -51,6 +51,12 @@ enum WeightType {
   LBS,
 }
 
+enum GenderType {
+  MALE,
+  FEMALE,
+  NOTHING,
+}
+
 enum HeightType {
   INCH,
   CM,
