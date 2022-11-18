@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
 import 'package:flutter_diabetes_app/utils/app_text_style.dart';
+import 'package:flutter_diabetes_app/utils/constant.dart';
 import 'package:provider/provider.dart';
-import '../../../services/providers/user_data_provider.dart';
-import '../../../utils/constant.dart';
 
 class AgeSection extends StatelessWidget {
   const AgeSection({

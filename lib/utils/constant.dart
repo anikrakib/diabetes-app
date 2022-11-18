@@ -1,19 +1,20 @@
-import 'package:flutter_diabetes_app/screens/other_information_screen/other_information_screen.dart';
-import 'package:flutter_diabetes_app/screens/region_screen/region_screen.dart';
-import 'package:flutter_diabetes_app/screens/waist_screen/waist_screen.dart';
-import 'package:flutter_diabetes_app/screens/weight_and_height_screen/weight_and_height_screen.dart';
-
-import '../screens/gender_and_age_screen/gender_and_age_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/gender_and_age_screen/gender_and_age_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/other_information_screen/other_information_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/region_screen/region_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/result_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/waist_screen/waist_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/weight_and_height_screen/weight_and_height_screen.dart';
 
 const THEME_STATUS_SHARED_PREP_KEY = "THEMESTATUS";
 const GET_STARTED_SHARED_PREP_KEY = "GETSTARTEDSTATUS";
 
-const INFORMATION_SCREENS = [
+const SCREENS = [
   GenderAndAgeScreen(),
   RegionScreen(),
   WeightAndHeightScreen(),
   WaistScreen(),
   OtherInformationScreen(),
+  ResultScreen(),
 ];
 const REGIONS = [
   'Australia',
@@ -33,6 +34,11 @@ enum HeightType {
   CM,
 }
 
+enum YESOrNO {
+  YES,
+  NO,
+}
+
 const getStartedText = 'Get Started';
 const selectGenderText = 'Select gender :';
 const ageSectionText = 'How old are you ?';
@@ -49,8 +55,11 @@ const bmiText = 'Your BMI is :';
 const bmiPointText = 'BMI point...';
 const inch = 'inch';
 const cm = 'cm';
+const yes = 'Yes';
+const no = 'No';
 const next = 'Next';
 const calculate = 'Calculate';
+const calculateAgain = 'Calculate Again';
 const initialRegion = 'Asia';
 const waistSuggestion = 'Stand up and measure your waist length'
     'from belly button in relaxed mood';

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../services/providers/user_data_provider.dart';
-import '../../../utils/colors.dart';
-import '../../../utils/constant.dart';
+import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
+import 'package:flutter_diabetes_app/utils/colors.dart';
+import 'package:flutter_diabetes_app/utils/constant.dart';
+
 
 class RegionListTile extends StatelessWidget {
   const RegionListTile({

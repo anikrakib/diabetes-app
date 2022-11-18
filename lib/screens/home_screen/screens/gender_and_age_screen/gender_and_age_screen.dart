@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_diabetes_app/screens/gender_and_age_screen/component/age_section.dart';
-import '../../utils/constant.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/gender_and_age_screen/component/age_section.dart';
+import 'package:flutter_diabetes_app/utils/constant.dart';
 import 'component/gender_section.dart';
 
 class GenderAndAgeScreen extends StatefulWidget {

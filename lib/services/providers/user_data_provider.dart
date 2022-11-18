@@ -12,6 +12,9 @@ class UserDataProvider extends ChangeNotifier {
   String _region = initialRegion;
   WeightType _weightType = WeightType.KG;
   HeightType _heightType = HeightType.INCH;
+  YESOrNO _diabetesPatientInFamily = YESOrNO.YES;
+  YESOrNO _bloodPressure = YESOrNO.YES;
+  YESOrNO _smokeCigarettes = YESOrNO.YES;
 
 
   int get currentAge => _currentAge;
@@ -24,6 +27,9 @@ class UserDataProvider extends ChangeNotifier {
   String get region => _region;
   WeightType get weightType => _weightType;
   HeightType get heightType => _heightType;
+  YESOrNO get diabetesPatientInFamily => _diabetesPatientInFamily;
+  YESOrNO get bloodPressure => _bloodPressure;
+  YESOrNO get smokeCigarettes => _smokeCigarettes;
 
   set changeCurrentAge(int age) {
     _currentAge = age;
@@ -74,6 +80,21 @@ class UserDataProvider extends ChangeNotifier {
 
   set changeHeightType(HeightType type) {
     _heightType = type;
+    notifyListeners();
+  }
+
+  set diabetesPatientInFamily(YESOrNO value) {
+    _diabetesPatientInFamily = value;
+    notifyListeners();
+  }
+
+  set bloodPressure(YESOrNO value) {
+    _bloodPressure = value;
+    notifyListeners();
+  }
+
+  set smokeCigarettes(YESOrNO value) {
+    _smokeCigarettes = value;
     notifyListeners();
   }
 

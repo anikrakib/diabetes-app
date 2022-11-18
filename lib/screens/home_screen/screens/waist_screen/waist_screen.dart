@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/generated/assets.dart';
+import 'package:flutter_diabetes_app/services/providers/dark_theme_provider.dart';
 import 'package:flutter_diabetes_app/utils/app_text_style.dart';
 import 'package:flutter_diabetes_app/utils/constant.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_diabetes_app/widgets/custom_ruler.dart';
-import '../../services/providers/dark_theme_provider.dart';
 
 class WaistScreen extends StatelessWidget {
   const WaistScreen({Key? key}) : super(key: key);

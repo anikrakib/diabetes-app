@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../generated/assets.dart';
-import '../../../services/providers/user_data_provider.dart';
-import '../../../utils/app_text_style.dart';
-import '../../../utils/constant.dart';
-import '../../../widgets/app_image.dart';
+import 'package:flutter_diabetes_app/generated/assets.dart';
+import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
+import 'package:flutter_diabetes_app/utils/app_text_style.dart';
+import 'package:flutter_diabetes_app/utils/constant.dart';
+import 'package:flutter_diabetes_app/widgets/app_image.dart';
 
 class TypeWidget extends StatelessWidget {
   const TypeWidget({

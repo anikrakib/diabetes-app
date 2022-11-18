@@ -56,28 +56,30 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       Expanded(
-                        child: NotificationListener<OverscrollIndicatorNotification>(
+                        child: NotificationListener<
+                            OverscrollIndicatorNotification>(
                           onNotification: (overscroll) {
                             overscroll.disallowIndicator();
                             return true;
                           },
                           child: PageView.builder(
-                            itemCount: 5,
+                            itemCount: SCREENS.length,
                             controller: pageController,
                             physics: const NeverScrollableScrollPhysics(),
                             onPageChanged: (index) {
                               homeScreenProvider.setPage = index;
                             },
                             itemBuilder: (context, index) =>
-                                INFORMATION_SCREENS[index],
+                                SCREENS[index],
                           ),
                         ),
                       ),
                       APPButton(
                         onPressed: () {
                           pageController.nextPage(
-                              duration: const Duration(milliseconds: 500),
-                              curve: Curves.ease);
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
                         },
                         homeScreenProvider: homeScreenProvider,
                       )

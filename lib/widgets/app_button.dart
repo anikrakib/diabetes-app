@@ -39,7 +39,11 @@ class APPButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          (homeScreenProvider?.currentPage != 4) ? text : calculate,
+          (homeScreenProvider?.currentPage != 4)
+              ? text
+              : (homeScreenProvider?.currentPage == 5)
+                  ? 'Calculate Again'
+                  : calculate,
           style: AppTextStyle.buttonTextStyle,
         ),
       ),
