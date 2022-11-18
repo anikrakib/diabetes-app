@@ -1,7 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/gender_and_age_screen/gender_and_age_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/other_information_screen/other_information_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/region_screen/region_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/result_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/advice_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/factors_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/risk_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/waist_screen/waist_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/weight_and_height_screen/weight_and_height_screen.dart';
 
@@ -22,6 +26,24 @@ const REGIONS = [
   'Middle East',
   'North Africa',
   'Other',
+];
+
+const resultTabs = [
+  Tab(
+    text: 'Risk',
+  ),
+  Tab(
+    text: 'Factors',
+  ),
+  Tab(
+    text: 'Advice',
+  ),
+];
+
+const resultTabView = [
+  RiskScreen(),
+  FactorScreen(),
+  AdviceScreen(),
 ];
 
 enum WeightType {
