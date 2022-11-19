@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/component/result_screen_top_section.dart';
-import 'package:flutter_diabetes_app/services/providers/bmi_calculation.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/advice_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/factors_screen.dart';
+import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/risk_screen.dart';
+import 'package:flutter_diabetes_app/services/providers/risk_point_calculation.dart';
 import 'package:flutter_diabetes_app/services/providers/result_screen_provider.dart';
 import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
 import 'package:flutter_diabetes_app/utils/constant.dart';
@@ -51,13 +54,22 @@ class _ResultScreenState extends State<ResultScreen>
               ResultScreenTopSection(
                 resultScreenData: resultScreenData,
                 tabController: _tabController,
-                riskPoint: riskPointCalculation.totalRiskPoint()+6,
+                riskPoint: riskPointCalculation.totalRiskPoint(),
               ),
               Expanded(
                 child: TabBarView(
                   controller: _tabController,
                   physics: const NeverScrollableScrollPhysics(),
-                  children: resultTabView,
+                  children: [
+                    RiskScreen(
+                      riskPointCalculation: riskPointCalculation,
+                    ),
+                    const FactorScreen(
+                    ),
+                    AdviceScreen(
+                      riskPointCalculation: riskPointCalculation,
+                    ),
+                  ],
                 ),
               ),
             ],

@@ -3,9 +3,6 @@ import 'package:flutter_diabetes_app/screens/home_screen/screens/gender_and_age_
 import 'package:flutter_diabetes_app/screens/home_screen/screens/other_information_screen/other_information_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/region_screen/region_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/result_screen.dart';
-import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/advice_screen.dart';
-import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/factors_screen.dart';
-import 'package:flutter_diabetes_app/screens/home_screen/screens/result_screen/screen/risk_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/waist_screen/waist_screen.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/weight_and_height_screen/weight_and_height_screen.dart';
 
@@ -40,10 +37,13 @@ const resultTabs = [
   ),
 ];
 
-const resultTabView = [
-  RiskScreen(),
-  FactorScreen(),
-  AdviceScreen(),
+const factors = [
+  'Gender',
+  'Age',
+  'Family history',
+  'Blood pressure',
+  'Waist circumstance',
+  'smoking',
 ];
 
 enum WeightType {

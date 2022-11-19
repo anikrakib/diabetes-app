@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_diabetes_app/screens/home_screen/screens/weight_and_height_screen/component/height_slider.dart';
-import 'package:flutter_diabetes_app/services/providers/bmi_calculation.dart';
+import 'package:flutter_diabetes_app/services/providers/risk_point_calculation.dart';
 import 'package:flutter_diabetes_app/services/providers/user_data_provider.dart';
 import 'package:flutter_diabetes_app/utils/app_text_style.dart';
 import 'package:flutter_diabetes_app/utils/colors.dart';
